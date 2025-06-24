@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+//builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IJobRepository, JobRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
