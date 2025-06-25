@@ -10,6 +10,9 @@ C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\JopSy.pdb
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Humanizer.dll
+C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -42,6 +45,8 @@ C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Confi
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
@@ -337,9 +342,3 @@ C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\refint\JopSy.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\JopSy.pdb
 C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\JopSy.genruntimeconfig.cache
 C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\ref\JopSy.dll
-C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\abd\Desktop\asp\JopSy\JopSy\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

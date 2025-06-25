@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using JopSy.Data.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace JopSy.ViewModel
 {
@@ -18,7 +19,8 @@ namespace JopSy.ViewModel
         [Compare("ConfirmPassword", ErrorMessage = "Password dosnt match")]
         public string Password { get; set; }
 
-
+        [Required(ErrorMessage = "نوع الكيان مطلوب")]
+        public EntityType EntityType { get; set; } // إضافة EntityType هنا
 
         [Display(Name = "Confirm password")]
         [Required(ErrorMessage = "Confirm password is required")]

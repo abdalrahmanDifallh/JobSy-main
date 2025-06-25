@@ -22,11 +22,12 @@ namespace JopSy.ViewModel
         [Required(ErrorMessage = "وضع العمل مطلوب")]
         public WorkMode WorkMode { get; set; }
 
-      
+        public int AddressId { get; set; }
         public DateTime PostedDate { get; set; } = DateTime.UtcNow;
 
         public Address Address { get; set; }
 
+        [Required(ErrorMessage = "معرف المستخدم مطلوب")]
         public int UserId { get; set; }
     }
 }

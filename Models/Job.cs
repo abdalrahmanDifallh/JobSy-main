@@ -6,7 +6,6 @@ namespace JopSy.Models
 {
     public class Job
     {
-
         [Key]
         public int Id { get; set; }
 
@@ -26,12 +25,10 @@ namespace JopSy.Models
         [Required(ErrorMessage = "تاريخ نشر فرصه العمل مطلوب")]
         public DateTime PostedDate { get; set; } = DateTime.UtcNow;
 
-        // ربط الوظيفة بالكيان
-        public string UserId { get; set; }
+        public int UserId { get; set; }
         [ForeignKey("UserId")]
         public User User { get; set; }
 
-        // ربط الوظيفة بالعنوان
         public int AddressId { get; set; }
         [ForeignKey("AddressId")]
         public Address Address { get; set; }
