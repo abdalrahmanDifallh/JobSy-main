@@ -8,8 +8,8 @@ namespace JopSy.Repository
     public class JobRepository : IJobRepository
     {
         private readonly ApplicationDbContext _context;
-        public JobRepository(ApplicationDbContext context) 
-        { 
+        public JobRepository(ApplicationDbContext context)
+        {
             _context = context;
         }
         public bool Add(Job job)
@@ -24,9 +24,13 @@ namespace JopSy.Repository
             return Save();
         }
 
+
+
         public async Task<IEnumerable<Job>> GetAll()
         {
-            return await _context.Jobs.ToListAsync();
+            return await _context.Jobs
+                .Include(j => j.Address) // تضمين العلاقة مع Address
+                .ToListAsync();
         }
 
         public async Task<Job> GetByIdAsync(int id)

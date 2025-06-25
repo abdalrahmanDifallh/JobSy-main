@@ -29,9 +29,26 @@ namespace JopSy.Controllers
         public async Task<IActionResult> Index()
         {
             var jobs = await _jobRepository.GetAll();
-            return View(jobs);
-        }
+            var jobViewModels = jobs.Select(job => new CreateJobViewModel
+            {
+                Id = job.Id,
+                Title = job.Title,
+                Description = job.Description,
+                ContractType = job.ContractType,
+                WorkMode = job.WorkMode,
+                PostedDate = job.PostedDate,
+                UserId = job.UserId,
+                AddressId = job.AddressId,
+                Address = job.Address != null ? new Address
+                {
+                    City = job.Address.City,
+                    Area = job.Address.Area,
+                    Street = job.Address.Street
+                } : null
+            }).ToList();
 
+            return View(jobViewModels);
+        }
         public IActionResult Create()
         {
             var curUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
