@@ -7,19 +7,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using JopSy.ViewModel;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace JopSy.Controllers
 {
+    [Authorize]
     public class JobController : Controller
     {
         private readonly IJobRepository _jobRepository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
 
-
-        public JobController(IJobRepository jobRepository)
+        public JobController(IJobRepository jobRepository , IHttpContextAccessor httpContextAccessor)
         {
             _jobRepository = jobRepository;
-
+            _httpContextAccessor = httpContextAccessor;
 
         }
 
@@ -29,11 +32,23 @@ namespace JopSy.Controllers
             return View(jobs);
         }
 
+        public IActionResult Create()
+        {
+            var curUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var createJobViewModel = new CreateJobViewModel
+            {
+                UserId = curUserId
+            };
+
+            return View(createJobViewModel);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create(CreateJobViewModel jobVM)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 
                 var job = new Job
                 {
@@ -42,7 +57,7 @@ namespace JopSy.Controllers
                     ContractType = jobVM.ContractType,
                     WorkMode = jobVM.WorkMode,
                     PostedDate = jobVM.PostedDate,
-                    UserId = jobVM.UserId,
+                    UserId = currentUserId,
                     AddressId = jobVM.AddressId,
              
                     Address = new Address
@@ -53,11 +68,11 @@ namespace JopSy.Controllers
                     }
                 };
                 _jobRepository.Add(job);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index" , "Home");
             }
             else
             {
-                ModelState.AddModelError("", " failed");
+                ModelState.AddModelError("", " faileddd");
 
 
             }

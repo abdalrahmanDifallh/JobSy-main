@@ -25,7 +25,7 @@ namespace JopSy.Models
         [Required(ErrorMessage = "تاريخ نشر فرصه العمل مطلوب")]
         public DateTime PostedDate { get; set; } = DateTime.UtcNow;
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         [ForeignKey("UserId")]
         public User User { get; set; }
 

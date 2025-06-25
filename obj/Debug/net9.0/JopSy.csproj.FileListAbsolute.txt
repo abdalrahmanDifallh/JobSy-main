@@ -342,3 +342,4 @@ C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\refint\JopSy.dll
 C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\JopSy.pdb
 C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\JopSy.genruntimeconfig.cache
 C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\ref\JopSy.dll
+C:\Users\abd\Desktop\asp\JopSy\JopSy\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

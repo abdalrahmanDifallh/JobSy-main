@@ -1,6 +1,7 @@
 ﻿using JopSy.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using JopSy.ViewModel;
 
 namespace JopSy.Data
 {
@@ -14,6 +15,7 @@ namespace JopSy.Data
 
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<JopSy.ViewModel.CreateJobViewModel> CreateJobViewModel { get; set; } = default!;
       
 
        

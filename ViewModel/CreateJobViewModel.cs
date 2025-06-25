@@ -28,6 +28,6 @@ namespace JopSy.ViewModel
         public Address Address { get; set; }
 
         [Required(ErrorMessage = "معرف المستخدم مطلوب")]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JopSy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df09e5460d1dfdabeab712dc8b1a74a84ed18f68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b449652ebeb129db2894ed93dca26b027e191c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("JopSy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JopSy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

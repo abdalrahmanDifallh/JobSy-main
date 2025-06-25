@@ -1,5 +1,82 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model JopSy.ViewModel.CreateJobViewModel
+@using JopSy.Data.Enum
+@using System.Security.Claims
+
 @{
+    ViewData["Title"] = "Create Job";
+}
+
+<h4>Create Job</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ContractType" class="control-label"></label>
+                <select asp-for="ContractType" class="form-control" asp-items="Html.GetEnumSelectList<ContractType>()">
+                    <option value="">Select Contract Type</option>
+                </select>
+                <span asp-validation-for="ContractType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="WorkMode" class="control-label"></label>
+                <select asp-for="WorkMode" class="form-control" asp-items="Html.GetEnumSelectList<WorkMode>()">
+                    <option value="">Select Work Mode</option>
+                </select>
+                <span asp-validation-for="WorkMode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PostedDate" class="control-label"></label>
+                <input asp-for="PostedDate" class="form-control" type="date" />
+                <span asp-validation-for="PostedDate" class="text-danger"></span>
+            </div>
+
+            <h5>Address Details</h5>
+            <div class="form-group">
+                <label asp-for="Address.City" class="control-label"></label>
+                <input asp-for="Address.City" class="form-control" />
+                <span asp-validation-for="Address.City" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address.Area" class="control-label"></label>
+                <input asp-for="Address.Area" class="form-control" />
+                <span asp-validation-for="Address.Area" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address.Street" class="control-label"></label>
+                <input asp-for="Address.Street" class="form-control" />
+                <span asp-validation-for="Address.Street" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
 }
