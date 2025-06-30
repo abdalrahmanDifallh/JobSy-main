@@ -33,6 +33,15 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
 
+builder.Services.AddAuthentication().AddCookie(options =>
+{
+   options.LoginPath = "/Account/Login"; // صفحة تسجيل الدخول
+    options.LogoutPath = "/Account/Logout"; // صفحة تسجيل الخروج
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // مدة صلاحية ملف تعريف الارتباط
+    options.SlidingExpiration = true; // تجديد ملف الارتباط عند النشاط
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

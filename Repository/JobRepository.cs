@@ -12,7 +12,7 @@ namespace JopSy.Repository
         {
             _context = context;
         }
-        public bool Add(Job job)
+        public bool Add(Job job) 
         {
             _context.Add(job);
             return Save();
@@ -33,15 +33,32 @@ namespace JopSy.Repository
                 .ToListAsync();
         }
 
+
         public async Task<Job> GetByIdAsync(int id)
         {
             return await _context.Jobs.Include(i => i.Address).FirstOrDefaultAsync(i => i.Id == id);
+
         }
 
         public async Task<Job> GetByIdAsyncNoTracking(int id)
         {
             return await _context.Jobs.Include(i => i.Address).AsNoTracking().FirstOrDefaultAsync(i => i.Id == id);
         }
+
+        public async Task<IEnumerable<Job>> GetByUserIdAsync(string userId)
+        {
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                return new List<Job>(); // إرجاع قائمة فارغة إذا كان userId فارغًا
+            }
+
+            return await _context.Jobs
+                .Include(j => j.Address) // تضمين العلاقة مع Address
+                .Where(j => j.UserId == userId) // تصفية بناءً على UserId
+                .ToListAsync();
+        }
+
+        
 
         public bool Save()
         {

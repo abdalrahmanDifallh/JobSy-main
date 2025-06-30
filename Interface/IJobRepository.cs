@@ -5,10 +5,9 @@ namespace JopSy.Interface
     public interface IJobRepository
     {
         Task<IEnumerable<Job>> GetAll();
-        //Task<IEnumerable<Job>> GetClupByCity(string city);
-        Task<Job> GetByIdAsync(int id);
+        public Task<IEnumerable<Job>> GetByUserIdAsync(string userId);
         Task<Job> GetByIdAsyncNoTracking(int id);
-
+        public Task<Job> GetByIdAsync(int id);
         bool Add(Job job);
         bool UpDate(Job job);
         bool Delete(Job job);

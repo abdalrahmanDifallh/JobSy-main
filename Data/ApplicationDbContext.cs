@@ -15,7 +15,8 @@ namespace JopSy.Data
 
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<JopSy.ViewModel.CreateJobViewModel> CreateJobViewModel { get; set; } = default!;
+        public DbSet<CreateJobViewModel> CreateJobViewModel { get; set; } = default!;
+        public DbSet<EditJobViewModel> EditJobViewModel { get; set; } = default!;
       
 
        

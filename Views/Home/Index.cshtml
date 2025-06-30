@@ -1,8 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Animation Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<div class="container-lg my-5">
+    <div class="p-5 bg-white rounded-4 shadow animate__animated animate__fadeIn">
+        <h1 class="display-5 fw-bold text-primary mb-3">Welcome to <span class="text-success">JopSy</span> 👋</h1>
+
+        <p class="fs-5 text-secondary">
+            Our platform helps you discover job opportunities easily and efficiently.
+            Whether you're looking for a job or want to post your own job listings — you're in the right place!
+        </p>
+
+        <hr />
+
+        <div class="mb-3">
+            🔍 Want to explore current job openings?
+            <a class="btn btn-outline-primary btn-sm mx-1" asp-controller="Job" asp-action="AllJobs">
+                Browse Jobs
+            </a>
+        </div>
+
+        <div>
+            📝 Want to post your own job opportunities?
+            <a class="btn btn-success btn-sm mx-1" asp-controller="Account" asp-action="Login">
+                Log In
+            </a>
+        </div>
+    </div>
 </div>
